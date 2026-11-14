@@ -1,2 +1,342 @@
-# gustavo
-meu portifólio
+```html
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Henrique - Portfólio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0ea5e9', // Sky blue
+                        secondary: '#0f172a', // Slate 900
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #0ea5e9;
+            position: absolute;
+            left: -8px;
+            top: 6px;
+            border: 4px solid #fff;
+        }
+        .float-whatsapp {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        .float-whatsapp:hover {
+            transform: scale(1.1);
+            color: #FFF;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navegação -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-40 top-0 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-bold text-xl text-secondary tracking-tight">Gustavo<span class="text-primary">.dev</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#sobre" class="text-gray-600 hover:text-primary transition font-medium">Sobre Mim</a>
+                    <a href="#experiencia" class="text-gray-600 hover:text-primary transition font-medium">Experiência</a>
+                    <a href="#educacao" class="text-gray-600 hover:text-primary transition font-medium">Educação & Cursos</a>
+                    <a href="#habilidades" class="text-gray-600 hover:text-primary transition font-medium">Habilidades</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="https://wa.me/55929933351939" target="_blank" class="bg-primary text-white px-5 py-2 rounded-full font-medium hover:bg-sky-600 transition shadow-md flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> Contato
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-32 pb-20 md:pt-40 md:pb-28 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-sky-100 text-primary font-semibold text-sm mb-6 border border-sky-200">
+                <i class="fas fa-graduation-cap mr-2"></i> Bolsista em Engenharia da Computação
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight mb-4">
+                Olá, eu sou <br class="hidden md:block" />
+                <span class="text-primary">Gustavo Henrique</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto md:mx-0">
+                Estudante de tecnologia focado em desenvolvimento, com experiência sólida na indústria e controle de qualidade. Pronto para inovar e solucionar problemas reais.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                <a href="#experiencia" class="bg-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition shadow-lg text-center">
+                    Ver Experiência
+                </a>
+                <a href="https://wa.me/55929933351939" target="_blank" class="bg-white text-secondary border-2 border-gray-200 px-8 py-3 rounded-lg font-medium hover:border-primary hover:text-primary transition shadow-sm text-center flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-green-500 text-xl"></i> Fale Comigo
+                </a>
+            </div>
+        </div>
+        <div class="flex-1 w-full max-w-md">
+            <div class="relative w-full aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gray-200 flex items-center justify-center">
+                <i class="fas fa-user-astronaut text-9xl text-gray-400"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Sobre Mim</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-2/3">
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        Sou estudante e <strong>bolsista de Engenharia da Computação</strong> na Faculdade Mathias Machline, com previsão de formatura em 2031. Tenho um perfil proativo e adaptável, moldado por minhas experiências no setor industrial.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        <strong>Meu principal objetivo profissional</strong> é desenvolver continuamente minhas habilidades, adquirir novas experiências e contribuir de forma dedicada e responsável, sempre com muita vontade de aprender em ambientes industriais e tecnológicos.
+                    </p>
+                </div>
+                <div class="md:w-1/3 w-full grid gap-4">
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center text-primary text-xl">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-medium">Localização</p>
+                            <p class="text-secondary font-semibold">Coroado - Manaus, AM</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center text-primary text-xl">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-medium">E-mail</p>
+                            <a href="mailto:gustavobatis2503@gmail.com" class="text-secondary font-semibold hover:text-primary transition break-all">gustavobatis2503@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência Profissional -->
+    <section id="experiencia" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Experiência Profissional</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600">Trajetória na I-SHENG BRASIL LTDA</p>
+            </div>
+
+            <div class="relative border-l-2 border-gray-200 ml-3 md:ml-0 md:pl-0">
+                <!-- Item 1 -->
+                <div class="mb-12 relative pl-6 md:pl-8">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <span class="inline-block px-3 py-1 bg-sky-50 text-primary text-sm font-semibold rounded-full mb-3">16/04/2026 - 30/06/2026</span>
+                        <h3 class="text-xl font-bold text-secondary mb-1">Almoxarife</h3>
+                        <p class="text-gray-700 mt-3 leading-relaxed">
+                            Atividades voltadas para a área administrativa e acompanhamento do processo de corte de bobinas, conferência de etiquetas e verificação da conformidade das especificações, garantindo a qualidade do produto final.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="mb-12 relative pl-6 md:pl-8">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <span class="inline-block px-3 py-1 bg-sky-50 text-primary text-sm font-semibold rounded-full mb-3">01/09/2025 - Atual</span>
+                        <h3 class="text-xl font-bold text-secondary mb-1">Operador Multifuncional 1</h3>
+                        <p class="text-gray-700 mt-3 leading-relaxed">
+                            Operação e regulagem de máquinas automáticas de corte, decapagem e aplicação de terminais/pinos em cabos elétricos. Acompanhamento do processo produtivo, conferência de especificações, inspeção visual/dimensional, identificação de não conformidades, controle de qualidade e preparação de cabos para injeção e testes elétricos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative pl-6 md:pl-8">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <span class="inline-block px-3 py-1 bg-sky-50 text-primary text-sm font-semibold rounded-full mb-3">14/08/2023 - 13/08/2025</span>
+                        <h3 class="text-xl font-bold text-secondary mb-1">Aprendiz SENAI</h3>
+                        <p class="text-gray-700 mt-3 leading-relaxed">
+                            Apoio na operação de máquinas automáticas. Acompanhamento do processo produtivo, conferência de especificações de ordens de produção, inspeção visual, organização do setor (5S) e cumprimento dos procedimentos rigorosos de qualidade e segurança.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educação e Cursos -->
+    <section id="educacao" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Educação & Certificações</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Educação Principal -->
+                <div class="bg-secondary text-white p-8 rounded-2xl shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 opacity-10">
+                        <i class="fas fa-university text-9xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 relative z-10">Engenharia da Computação</h3>
+                    <p class="text-sky-300 font-medium mb-4 relative z-10">Faculdade Mathias Machline</p>
+                    <div class="inline-block bg-white/20 px-3 py-1 rounded-full text-sm backdrop-blur-sm relative z-10">
+                        <i class="fas fa-calendar-alt mr-2"></i> Previsão: 2031 (Cursando)
+                    </div>
+                    <div class="mt-6 relative z-10">
+                        <span class="bg-primary text-white px-4 py-1.5 rounded-lg text-sm font-bold shadow-md">
+                            Aluno Bolsista
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Lista de Cursos -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-sm transition">
+                        <div class="text-primary mb-2"><i class="fas fa-cogs text-2xl"></i></div>
+                        <h4 class="font-bold text-secondary">OPM (Operador do Processo de Manufatura)</h4>
+                        <p class="text-sm text-gray-500 mt-1">SENAI-AM • 1600h</p>
+                    </div>
+                    <div class="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-sm transition">
+                        <div class="text-primary mb-2"><i class="fas fa-laptop-code text-2xl"></i></div>
+                        <h4 class="font-bold text-secondary">Informática Básica & Avançada</h4>
+                        <p class="text-sm text-gray-500 mt-1">SENAC-AM • 140h totais</p>
+                    </div>
+                    <div class="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-sm transition">
+                        <div class="text-primary mb-2"><i class="fas fa-box-open text-2xl"></i></div>
+                        <h4 class="font-bold text-secondary">Almoxarife & NR11 (Transporte de Cargas)</h4>
+                        <p class="text-sm text-gray-500 mt-1">Udemy • Certificações</p>
+                    </div>
+                    <div class="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-sm transition">
+                        <div class="text-primary mb-2"><i class="fas fa-shield-alt text-2xl"></i></div>
+                        <h4 class="font-bold text-secondary">NR12 & Injeção Plástica</h4>
+                        <p class="text-sm text-gray-500 mt-1">I-Sheng Brasil Ltda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Habilidades & Competências</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Soft skills e metodologias adquiridas através da experiência em ambientes industriais e trabalhos em equipe.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                <div class="skill-badge bg-white border border-gray-200 px-6 py-3 rounded-xl font-medium text-gray-700 shadow-sm flex items-center gap-3">
+                    <i class="fas fa-comments text-primary"></i> Boa comunicação
+                </div>
+                <div class="skill-badge bg-white border border-gray-200 px-6 py-3 rounded-xl font-medium text-gray-700 shadow-sm flex items-center gap-3">
+                    <i class="fas fa-sync-alt text-primary"></i> Flexibilidade & Adaptação
+                </div>
+                <div class="skill-badge bg-white border border-gray-200 px-6 py-3 rounded-xl font-medium text-gray-700 shadow-sm flex items-center gap-3">
+                    <i class="fas fa-users text-primary"></i> Trabalho em equipe
+                </div>
+                <div class="skill-badge bg-white border border-gray-200 px-6 py-3 rounded-xl font-medium text-gray-700 shadow-sm flex items-center gap-3">
+                    <i class="fas fa-handshake text-primary"></i> Comprometimento
+                </div>
+                <div class="skill-badge bg-white border border-gray-200 px-6 py-3 rounded-xl font-medium text-gray-700 shadow-sm flex items-center gap-3">
+                    <i class="fas fa-lightbulb text-primary"></i> Criatividade & Inovação
+                </div>
+                <div class="skill-badge bg-white border border-gray-200 px-6 py-3 rounded-xl font-medium text-gray-700 shadow-sm flex items-center gap-3">
+                    <i class="fas fa-broom text-primary"></i> Organização (5S)
+                </div>
+                <div class="skill-badge bg-white border border-gray-200 px-6 py-3 rounded-xl font-medium text-gray-700 shadow-sm flex items-center gap-3">
+                    <i class="fas fa-check-double text-primary"></i> Controle de Qualidade
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé e Contato -->
+    <footer id="contato" class="bg-secondary text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <a href="#" class="font-bold text-2xl text-white tracking-tight mb-2 block">Gustavo<span class="text-primary">.dev</span></a>
+                <p class="text-sm text-gray-400 mt-2">Engenharia da Computação | Manaus, AM</p>
+            </div>
+            
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <p class="text-white font-medium mb-2">Vamos conversar?</p>
+                <div class="flex items-center gap-4">
+                    <a href="mailto:gustavobatis2503@gmail.com" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/55929933351939" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 hover:text-white transition">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+            &copy; 2026 Gustavo Henrique Batista Pimentel. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- Botão Fixo Flutuante do WhatsApp -->
+    <a href="https://wa.me/55929933351939" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="float-whatsapp"
+       title="Fale comigo no WhatsApp"
+       aria-label="Contato via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
+```
